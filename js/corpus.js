@@ -9,7 +9,7 @@
       'looser',
       'jerk'
     ],
-    function : [
+    action : [
       'I want to have a meaningful interaction with another jerk face',
       'I want to add a meaningless product to my "virtual cart"',
       'I want to waste time tooling around on a website',

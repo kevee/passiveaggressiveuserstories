@@ -4,13 +4,13 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: ['js/corpus.js', 'js/source.js'],
-        dest: 'js/passive-agressive.js'
+        dest: 'js/passive-aggressive.js'
       }
     },
     uglify: {
       dist: {
         files: {
-          'js/passive-agressive.min.js': 'js/passive-agressive.js'
+          'js/passive-aggressive.min.js': 'js/passive-aggressive.js'
         }
       }
     },
