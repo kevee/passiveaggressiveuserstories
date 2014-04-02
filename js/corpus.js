@@ -25,7 +25,7 @@
     ],
     purpose : [
       'because I said so',
-      'because my boss is an asshole',
+      'because my boss',
       'so I can get back to everyone who laughed at me in high school',
       'because I am having an existential crisis',
       'so I can forget how sad my life is',
