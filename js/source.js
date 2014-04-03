@@ -13,7 +13,8 @@ var passiveAgressive = {
       actionNumber = numbers[1];
       purposeNumber = numbers[2];
     }
-    if (vowels.indexOf(corpus.profile[profileNumber].substr(0, 1)) > -1) {
+    if (vowels.indexOf(corpus.profile[profileNumber].substr(0, 1)) > -1 &&
+        corpus.profile[profileNumber] !== 'user') {
       story.push('n');
     }
     story.push(' ');
