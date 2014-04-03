@@ -2,6 +2,11 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
+      options: {
+        banner: ';(function($, global) {' + "\n",
+        footer: "\n" + '})(jQuery, window);',
+        stripBanners: true
+      },
       dist: {
         src: ['js/corpus.js', 'js/source.js'],
         dest: 'js/passive-aggressive.js'

@@ -1,16 +1,11 @@
-/**
- * Inspired by http://whatthefuckismytwitterbio.com/
- */
+;(function($, global) {
 (function(global) {
 
   global.corpus = {
     profile : [
-      'idiot',
-      'looser',
-      'jerk',
       'user',
       'lowly employee',
-      'mailroom gal'
+      'intern'
     ],
     action : [
       'I want to have a meaningful interaction with another jerk face',
@@ -21,7 +16,8 @@
       'I feel like clicking something blue',
       'I guess I\'d like to do something',
       'I want to be wowed by your design skills',
-      'I want to change the font to Comic Sans'
+      'I want to change the font to Comic Sans',
+      'I really, really want to find Form 801'
     ],
     purpose : [
       'because I said so',
@@ -39,39 +35,43 @@
   };
 })(this);
 
-(function($) {
 
-  var passiveAgressive = {
+var passiveAgressive = {
 
-    doIt : function(loadFromHash) {
-      var story = ['As a '];
-      var profileNumber = Math.floor(Math.random()*window.corpus.profile.length);
-      var actionNumber = Math.floor(Math.random()*window.corpus.profile.length);
-      var purposeNumber = Math.floor(Math.random()*window.corpus.profile.length);
-      if(loadFromHash && window.location.hash.length > 0) {
-        var numbers = window.location.hash.replace('#', '').split('-');
-        profileNumber = numbers[0];
-        actionNumber = numbers[1];
-        purposeNumber = numbers[2];
-      }
-      story.push(window.corpus.profile[profileNumber]);
-      story.push(', ');
-      story.push(window.corpus.action[actionNumber]);
-      story.push(' ');
-      story.push(window.corpus.purpose[purposeNumber]);
-      story.push('.');
-      $('#story').html(story.join(''));
-      window.location.hash = profileNumber + '-' + actionNumber + '-' + purposeNumber;
+  doIt : function(loadFromHash) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    var story = ['As a'];
+    var profileNumber = Math.floor(Math.random() * corpus.profile.length);
+    var actionNumber = Math.floor(Math.random() * corpus.profile.length);
+    var purposeNumber = Math.floor(Math.random() * corpus.profile.length);
+    if (loadFromHash && location.hash.length > 0) {
+      var numbers = location.hash.replace('#', '').split('-');
+      profileNumber = numbers[0];
+      actionNumber = numbers[1];
+      purposeNumber = numbers[2];
     }
-  };
+    if (vowels.indexOf(corpus.profile[profileNumber].substr(0, 1)) > -1) {
+      story.push('n');
+    }
+    story.push(' ');
+    story.push(corpus.profile[profileNumber]);
+    story.push(', ');
+    story.push(corpus.action[actionNumber]);
+    story.push(' ');
+    story.push(corpus.purpose[purposeNumber]);
+    story.push('.');
+    $('#story').html(story.join(''));
+    location.hash = profileNumber + '-' + actionNumber + '-' + purposeNumber;
+  }
+};
 
-  $(document).ready(function() {
-    passiveAgressive.doIt(true);
-  });
+$(document).ready(function() {
+  passiveAgressive.doIt(true);
+});
 
-  $('#reload').on('click', function(event) {
-    event.preventDefault();
-    passiveAgressive.doIt();
-  });
+$('#reload').on('click', function(event) {
+  event.preventDefault();
+  passiveAgressive.doIt();
+});
 
-})(jQuery);
+})(jQuery, window);

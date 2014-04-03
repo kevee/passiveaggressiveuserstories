@@ -5,12 +5,9 @@
 
   global.corpus = {
     profile : [
-      'idiot',
-      'looser',
-      'jerk',
       'user',
       'lowly employee',
-      'mailroom gal'
+      'intern'
     ],
     action : [
       'I want to have a meaningful interaction with another jerk face',
@@ -21,7 +18,8 @@
       'I feel like clicking something blue',
       'I guess I\'d like to do something',
       'I want to be wowed by your design skills',
-      'I want to change the font to Comic Sans'
+      'I want to change the font to Comic Sans',
+      'I really, really want to find Form 801'
     ],
     purpose : [
       'because I said so',
