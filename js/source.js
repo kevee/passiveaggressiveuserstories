@@ -5,8 +5,8 @@ var passiveAgressive = {
     var vowels = ['a', 'e', 'i', 'o', 'u'];
     var story = ['As a'];
     var profileNumber = Math.floor(Math.random() * corpus.profile.length);
-    var actionNumber = Math.floor(Math.random() * corpus.profile.length);
-    var purposeNumber = Math.floor(Math.random() * corpus.profile.length);
+    var actionNumber = Math.floor(Math.random() * corpus.action.length);
+    var purposeNumber = Math.floor(Math.random() * corpus.purpose.length);
     if (loadFromHash && location.hash.length > 0) {
       var numbers = location.hash.replace('#', '').split('-');
       profileNumber = numbers[0];
