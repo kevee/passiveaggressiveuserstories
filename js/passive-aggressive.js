@@ -34,7 +34,10 @@
       'since I guess I\'m here and stuff',
       'because this is how life is now, and I\'m OK with that',
       'Since I have nothing better to do',
-      'because it\'s 4:00 pm and I\'m still in my pajamas'
+      'because it\'s 4:00 pm and I\'m still in my pajamas',
+      'so I don\'t get confused or freaked out',
+      'so I don\'t throw my computer out the window',
+      'so I can stop speaking to the person in the next cubicle'
     ]
   };
 })(this);
